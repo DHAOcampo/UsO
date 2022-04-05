@@ -12,13 +12,15 @@ if(counter > 10){
     if (counter<0){
       counter = 0;
     }
-
+if(counter == 7){
+  document.getElementById("footer").style.backgroundColor = "#CD65A3";
+}
     if(counter == 5){
-  document.getElementById("footer").style.backgroundColor = "yellow";
+  document.getElementById("footer").style.backgroundColor = "#F2BC27";
 }
 
 if(counter == 3){
-  document.getElementById("footer").style.backgroundColor = "red";
+  document.getElementById("footer").style.backgroundColor = "#FF007B";
 }
 
     if (counter == 0){

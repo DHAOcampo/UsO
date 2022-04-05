@@ -1,5 +1,6 @@
 var counter = 10;
 var endscore = 0;
+var rank = "f";
 function timeremain() {
 if(counter > 10){
     counter = 10;
@@ -21,6 +22,7 @@ if(counter == 3){
 }
 
     if (counter == 0){
+                 
       document.getElementById("footer").remove();
         document.getElementById("Unravel").pause();
         var game = document.createElement("div");
@@ -33,6 +35,7 @@ if(counter == 3){
         window.alert(endscore);
 
         function endscreen(){
+                      clearTimeout(no);
   var restart = document.createElement("div");
   restart.setAttribute('class','restart');
   game.appendChild(restart);
@@ -50,7 +53,29 @@ if(counter == 3){
     }
 }
 
+function WIN(){
+
+  if(endscore<10000){
+    rank = "D";
+    }
+    else if(endscore<20000){
+      rank = "C";
+    }
+    else if(endscore<30000){
+      rank = "B";
+    }
+    else if(endscore<40000){
+      rank = "A";
+    }
+    else if(endscore>=40000){
+      rank = "S";
+    }
+      localStorage.setItem("rank", rank);
+        location.href = "congrats.html";
+}
+
 function gameBegin(){
+     no = setTimeout(WIN, 90000);
 document.getElementById("Unravel").play();
 document.getElementById("starto").style.display = "none";
 setInterval(timeremain, 1000);

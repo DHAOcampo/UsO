@@ -67,7 +67,7 @@ p{
     position: absolute;
     top: 330px;
     left: 800px;
- background-color:#0f1014;
+ background-color:rgb(23, 25, 29);
  color:white;
  padding-top: 5px;
  border-radius: 50px;
@@ -113,7 +113,7 @@ left: 10px;
     border: none;
     color: white;
     font-size: 30px;
-    background-color: #0f1014;
+    background-color: rgb(23, 25, 29);
     font-family: 'Allerta', sans-serif;
     border-radius: 100%;
 }
@@ -128,7 +128,7 @@ h1{
     position: absolute;
     top: 430px;
     left: 750px;
- background-color:#0f1014;
+ background-color:rgb(23, 25, 29);
  color:white;
  border-radius: 50px;
  font-family: 'Allerta', sans-serif;

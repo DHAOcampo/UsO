@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="osu.css">
+    <script src="circle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div id="body">
+     <div id="logo" onclick="myFunction()">
+     </div>
+     <div id="startbutton" onclick="location.href = 'https://dhaocampo.github.io/ComSci-WordScapes/osu.html' ">
+      START
+    </div>
+    <div id="instructions" onclick="instructions()">
+      HOW TO PLAY
+    </div>
+    <div id="about" onclick="about()">CREDITS</div>
+     <audio id="myAudio" >
+        <source src="beat.mp3" type="audio/mpeg">
+      </audio>
+
+
+      
+
+      <script>
+        var counter=0;
+      function myFunction() {
+    if (counter==0) {
+      var x = document.getElementById("myAudio").play();
+        document.getElementById("myAudio").loop = true;
+        document.getElementById("logo").classList.add('beat');
+    counter++;
+    }
+    else {
+      var x = document.getElementById("myAudio");
+      x.pause();
+x.currentTime = 0;
+        document.getElementById("myAudio").loop = false;
+        document.getElementById("logo").classList.remove('beat');
+    counter=0;
+      }
+    }
+      </script>
+      <script>
+ function instructions() {
+  var page = document.createElement("div");
+  var game2 = document.createElement("div");
+        game2.setAttribute('id','modal');
+             document.getElementById("body").appendChild(game2);
+page.setAttribute('id','page');
+document.getElementById("body").appendChild(page);
+page.innerHTML = "<h1>HOW TO PLAY</h1><button id='yay'>X</button><p>The aim of the game is to click the circles to the beat to get points and to extend the timer, If the timer(the line at the bottom) reaches zero u lose. Clicking the circle when the ring is very small (as seen below) will get you extra points and will lengthen your timer; you can tell what you got based on the header above. Failure to click the circle at all will minus points and will shorten your timer.When you enter the page click the USO! button to start the game.restart the browser if the music doesnt play immediately. The most important rule is too have fun :))<div id='photo' </div> "
+document.getElementById("yay").addEventListener("click", gonelmao);
+
+function gonelmao(){
+  document.getElementById("page").remove();
+  document.getElementById("modal").remove();
+}
+
+}
+ </script>
+      <script>
+        function about() {
+         var page = document.createElement("div");
+         var game2 = document.createElement("div");
+               game2.setAttribute('id','modal');
+                    document.getElementById("body").appendChild(game2);
+       page.setAttribute('id','page');
+       document.getElementById("body").appendChild(page);
+       page.innerHTML = "<h1>Credits</h1><button id='yay'>X</button><p>Developers: Stephen Tunaya, Mathew Angeles, Dennise Haze Ocampo <br><br> Music: Unravel - https://archive.org/details/Unravel_201803 Homepage - EXplorer-Billy From soundtrap<br><br>Wallpaper - https://www.teahub.io/viewwp/imTRow_tokyo-ghoul-wallpaper-8k/  </p>"
+       document.getElementById("yay").addEventListener("click", gonelmao);
+       
+       function gonelmao(){
+         document.getElementById("page").remove();
+         document.getElementById("modal").remove();
+       }
+       
+       }
+        </script>
+
+
+      </body>
+</html>

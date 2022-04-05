@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="osu.css">
+      <link rel="stylesheet" href="endscreen.css">
+      <link rel="stylesheet" href="congrats.css">
+    <script src="circle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
+
+</head>
+    <body>
+
+<div id="body">
+<div id="congrats">
+CONGRATULATIONS
+</div>
+
+<div id="score">YOUR RANK:<div id="photo"></div> </div>
+
+
+
+
+
+<div class="back" onclick="location.href = 'https://dhaocampo.github.io/DHAOcampo/UsO/index.html' ">BACK</div>
+</div>
+
+
+    </body>
+    <script>
+        const x = localStorage.getItem('rank');
+      if(x == "D"){
+      document.getElementById("photo").style.backgroundImage = "url('D.png')";
+      }
+      if(x == "C"){
+      document.getElementById("photo").style.backgroundImage = "url('C.png')";
+      }
+      if(x == "B"){
+      document.getElementById("photo").style.backgroundImage = "url('B.png')";
+      }
+      if(x == "A"){
+      document.getElementById("photo").style.backgroundImage = "url('A.png')";
+      }
+      if(x == "S"){
+      document.getElementById("photo").style.backgroundImage = "url('S.png')";
+      }
+      
+      </script>
+</html>

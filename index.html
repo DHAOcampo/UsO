@@ -2,12 +2,50 @@
 <html>
 <head>
     <link rel="stylesheet" href="homepage.css">
-    <link rel="stylesheet" href="osu.css">
+
     <script src="circle.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Allerta&display=swap" rel="stylesheet">
-    <script>
+</head>
+    <body>
+        <div id="body">
+     <div id="logo" onclick="myFunction()">
+     </div>
+     <div id="startbutton" onclick="location.href = 'https://dhaocampo.github.io/UsO/osu.html' ">
+      START
+    </div>
+    <div id="instructions" onclick="instructions()">
+      HOW TO PLAY
+    </div>
+    <div id="about" onclick="about()">CREDITS</div>
+     <audio id="myAudio" >
+        <source src="beat.mp3" type="audio/mpeg">
+      </audio>
+
+
+      
+
+      <script>
+        var counter=0;
+      function myFunction() {
+    if (counter==0) {
+      var x = document.getElementById("myAudio").play();
+        document.getElementById("myAudio").loop = true;
+        document.getElementById("logo").classList.add('beat');
+    counter++;
+    }
+    else {
+      var x = document.getElementById("myAudio");
+      x.pause();
+x.currentTime = 0;
+        document.getElementById("myAudio").loop = false;
+        document.getElementById("logo").classList.remove('beat');
+    counter=0;
+      }
+    }
+      </script>
+      <script>
  function instructions() {
   var page = document.createElement("div");
   var game2 = document.createElement("div");
@@ -44,45 +82,6 @@ function gonelmao(){
        }
         </script>
 
-</head>
-    <body>
-        <div id="body2">
-     <div id="logo" onclick="myFunction()">
-     </div>
-     <div id="startbutton" onclick="location.href = 'https://dhaocampo.github.io/UsO/osu.html' ">
-      START
-    </div>
-    <div id="instructions" onclick="instructions()">
-      HOW TO PLAY
-    </div>
-    <div id="about" onclick="about()">CREDITS</div>
-     <audio id="myAudio" >
-        <source src="beat.mp3" type="audio/mpeg">
-      </audio>
-
-
-      
-
-      <script>
-        var counter=0;
-      function myFunction() {
-    if (counter==0) {
-      var x = document.getElementById("myAudio").play();
-        document.getElementById("myAudio").loop = true;
-        document.getElementById("logo").classList.add('beat');
-    counter++;
-    }
-    else {
-      var x = document.getElementById("myAudio");
-      x.pause();
-x.currentTime = 0;
-        document.getElementById("myAudio").loop = false;
-        document.getElementById("logo").classList.remove('beat');
-    counter=0;
-      }
-    }
-      </script>
-      
 
       </body>
 </html>

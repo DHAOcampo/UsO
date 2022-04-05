@@ -4,7 +4,7 @@
     position: absolute;
     top: 120px;
     left: 300px;
-    background-image: url("osu.png");
+    background-image: url("home.png");
     background-size: cover;
     transition: all .5s;
 }

@@ -57,13 +57,13 @@ if(counter == 3){
 
 function WIN(){
 
-  if(endscore<10000){
+ if(endscore<10000){
     rank = "D";
     }
-    else if(endscore<20000){
+    else if(endscore<30000){
       rank = "C";
     }
-    else if(endscore<30000){
+    else if(endscore<35000){
       rank = "B";
     }
     else if(endscore<40000){
@@ -73,6 +73,7 @@ function WIN(){
       rank = "S";
     }
       localStorage.setItem("rank", rank);
+      localStorage.setItem("endscore", endscore);
         location.href = "congrats.html";
 }
 

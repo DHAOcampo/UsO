@@ -30,6 +30,8 @@ CONGRATULATIONS
     </body>
     <script>
         const x = localStorage.getItem('rank');
+                const y = localStorage.getItem('endscore');
+document.getElementById("endscore").innerHTML += y;
       if(x == "D"){
       document.getElementById("photo").style.backgroundImage = "url('D.png')";
       }

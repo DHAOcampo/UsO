@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>CONGRATS</title>
     <link rel="stylesheet" href="osu.css">
       <link rel="stylesheet" href="endscreen.css">
       <link rel="stylesheet" href="congrats.css">
@@ -26,9 +27,7 @@ CONGRATULATIONS
 <div class="back" onclick="location.href = 'https://dhaocampo.github.io/UsO/' ">BACK</div>
 </div>
 
-
-    </body>
-    <script>
+        <script>
         const x = localStorage.getItem('rank');
                 const y = localStorage.getItem('endscore');
 document.getElementById("endscore").innerHTML += y;
@@ -47,6 +46,8 @@ document.getElementById("endscore").innerHTML += y;
       if(x == "S"){
       document.getElementById("photo").style.backgroundImage = "url('S.png')";
       }
-      
       </script>
+
+    </body>
+    
 </html>
